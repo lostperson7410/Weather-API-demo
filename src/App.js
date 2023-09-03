@@ -21,7 +21,7 @@ const App = () =>{
   //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
   const fetchAPI = async (city_name) =>{
-    const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city_name ? city_name : "Bangkok"}&appid=cfd7024e2b79e9dc84efeff3be5aa26e`)
+    const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city_name ? city_name : "Bangkok"}&appid=${process.env.API_KEY}`)
     setData(res?.data)
   }
   
